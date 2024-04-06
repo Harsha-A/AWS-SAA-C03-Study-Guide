@@ -1199,7 +1199,7 @@ VPC lets you provision a logically isolated section of the AWS cloud where you c
 - You use subnets to efficiently utilize networks that have a large number of hosts
 - VPCs come with defense in depth by design. From the sub-network (NACLs) down to the individual server (security group) and further down to the application itself (secure coding practices), you can set up multiple levels of protection against malicious users and programs.
 - The default VPC for your AWS environment permits all subnets to have a route out to the internet meaning all subnets in the default VPC are internet accessible. The default setting allows you to immediately deploy instances and each EC2 instance will have both a public and private IP address.
-- There is one default VPC per region. However, you can have as many custom VPCs as you want and all are private by default.
+- There is one default VPC per region. However, you can have as many custom VPCs as you want and all are private by default. (Max 5 VPC's per region)
 - When you create a custom VPC, new subnets are not created by default. You must create them separately. The same is true for an internet gateway. If you want your VPC to have internet access, you need to also create the gateway so that the network can be reached publicly by the world.
 - Because of this, when you create an IGW it will initially be in an detached state. You will need to manually assign it to the custom VPC.
 - Once you create a custom VPC however, the following are created by default:
